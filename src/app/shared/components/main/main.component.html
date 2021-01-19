@@ -1,0 +1,33 @@
+<div class="location-and-date">
+  <h1 class="location-and-date__location">{{todayWeather?.name}}, {{todayWeather?.sys?.country}}</h1>
+  <div>{{todayWeather?.dt | date: 'dd.MM.yyyy'}}</div>
+</div>
+<div class="current-temperature">
+  <div class="current-temperature__icon-container">
+    <img src="/assets/icons/mostly-sunny.svg" class="current-temperature__icon" alt="">
+  </div>
+  <div class="current-temperature__content-container">
+    <div class="current-temperature__value">{{todayWeather?.main?.temp}}&deg;</div>
+    <div class="current-temperature__summary">{{todayWeather?.weather[0]?.main}}</div>
+  </div>
+</div>
+<div class="current-stats">
+  <div>
+    <div class="current-stats__value">{{todayWeather?.main?.temp_max}}&deg;</div>
+    <div class="current-stats__label">Макс.</div>
+    <div class="current-stats__value">{{todayWeather?.main?.temp_min}}&deg;</div>
+    <div class="current-stats__label">Мин.</div>
+  </div>
+  <div>
+    <div class="current-stats__value">{{todayWeather?.wind?.speed}} м/ч</div>
+    <div class="current-stats__label">Ветер</div>
+    <div class="current-stats__value">{{todayWeather?.main?.humidity}}%</div>
+    <div class="current-stats__label">Влажность</div>
+  </div>
+  <div>
+    <div class="current-stats__value">{{todayWeather?.sys?.sunrise | date: 'HH:mm'}}</div>
+    <div class="current-stats__label">Восход</div>
+    <div class="current-stats__value">{{todayWeather?.sys?.sunset | date: 'HH:mm'}}</div>
+    <div class="current-stats__label">Закат</div>
+  </div>
+</div>

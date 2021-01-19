@@ -1,0 +1,25 @@
+<div class="next-5-days__row">
+  <div class="next-5-days__date">
+    {{getWeekDay(weather?.dt)}}
+    <div class="next-5-days__label">{{weather?.dt | date: 'dd/MM'}}</div>
+  </div>
+  <div class="next-5-days__low">
+    {{weather?.temp?.min}}&deg;
+    <div class="next-5-days__label">Макс.</div>
+  </div>
+  <div class="next-5-days__high">
+    {{weather?.temp?.max}}&deg;
+    <div class="next-5-days__label">Мин.</div>
+  </div>
+  <div class="next-5-days__icon">
+    <img src="/assets/icons/sunny.svg" alt="Sunny">
+  </div>
+  <div class="next-5-days__rain">
+    {{weather?.humidity}}%
+    <div class="next-5-days__label">Влажность</div>
+  </div>
+  <div class="next-5-days__wind">
+    {{weather?.speed}} м/ч
+    <div class="next-5-days__label">Ветер</div>
+  </div>
+</div>
